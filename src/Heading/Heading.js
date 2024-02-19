@@ -1,9 +1,22 @@
+import React, { useState, useEffect } from "react";
+import { getRandomImageUrl } from "../api";
 import "./heading.css";
 
 export function Heading() {
+  const [imageUrl, setImageUrl] = useState(""); // State to store the random image URL
+
+  useEffect(() => {
+    const fetchRandomImage = async () => {
+      const imageUrl = await getRandomImageUrl();
+      setImageUrl(imageUrl);
+    };
+
+    fetchRandomImage();
+  }, []); // Fetch a random image when the component mounts
+
   return (
     <div className="heading-container">
-      <img src="/mint-marigold.png" alt="flower" className="heading-image" />
+      <img src={imageUrl} alt="Random" className="heading-image" />
       <div className="heading-content">
         <h1>Heading</h1>
         <p>

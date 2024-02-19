@@ -1,11 +1,17 @@
+/* heading.css */
+
 .heading-container {
   display: flex;
   align-items: center;
-  margin: 0 100px;
+  margin: 50px 100px;
 }
 
 .heading-image {
   height: 300px;
   width: auto;
-  margin-right: 100px;
+  margin-right: 20px;
+}
+
+.heading-content {
+  flex: 1;
 }
