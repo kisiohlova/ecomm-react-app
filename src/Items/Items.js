@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ItemCard } from "../ItemCard/ItemCard";
 import { getRandomImageUrl } from "../api";
-import Button from "@mui/material/Button";
+import { ViewMoreButton } from "../ViewMoreButton/ViewMoreButton";
 import "./items.css";
 
 export function Items() {
@@ -56,11 +56,7 @@ export function Items() {
           />
         ))}
       </div>
-      <div className="button-container">
-        <Button variant="contained" onClick={handleViewMore} disabled={loading}>
-          View More
-        </Button>
-      </div>
+      <ViewMoreButton onClick={handleViewMore} disabled={loading} />
     </>
   );
 }
