@@ -1,8 +1,6 @@
 .footer-container {
   padding: 0px 30px;
   display: flex;
-  border-style: solid;
-  border-width: thin;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
@@ -11,7 +9,7 @@
 .left-content,
 .center-content,
 .right-content {
-  flex-basis: 30%;
+  flex-basis: 33%;
 }
 
 .left-content p {
