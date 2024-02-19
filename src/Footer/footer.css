@@ -1,15 +1,14 @@
 .footer-container {
-  padding: 0px 30px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-top: 40px;
 }
 
 .left-content,
 .center-content,
 .right-content {
-  flex-basis: 33%;
+  flex-basis: 33.3%;
 }
 
 .left-content p {
@@ -44,10 +43,6 @@
 
 #pinterest {
   color: #e60023;
-}
-
-.right-content > *:not(:last-child) {
-  margin-right: 10px;
 }
 
 .copyright {

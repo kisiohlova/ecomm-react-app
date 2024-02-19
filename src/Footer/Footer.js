@@ -16,7 +16,8 @@ export function Footer() {
           <div className="left-content">
             <Typography variant="h6">Branding stuff</Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              doloribus doloremque excepturi minus cupiditate, aspernatur.
             </Typography>
           </div>
           <div className="center-content">
