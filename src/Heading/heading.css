@@ -1,0 +1,11 @@
+.heading-container {
+  display: flex;
+  align-items: center;
+  margin: 0 100px;
+}
+
+.heading-image {
+  height: 300px;
+  width: auto;
+  margin-right: 100px;
+}

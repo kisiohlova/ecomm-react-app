@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+
+import { NavBar } from "./NavBar/NavBar";
+import { Heading } from "./Heading/Heading";
+import { Items } from "./Items/Items";
+import { Footer } from "./Footer/Footer";
+
+const itemsData = [
+  {
+    imageUrl: "/iris.png",
+    title: "Iris",
+    text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    imageUrl: "/lily.png",
+    title: "Lily",
+    text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    imageUrl: "/chrysanthemum.png",
+    title: "Chrysanthemum",
+    text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Heading />
+      <Items items={itemsData} />
+      <Footer />
+    </>
   );
 }
 
