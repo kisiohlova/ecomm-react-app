@@ -1,20 +1,41 @@
+import React from "react";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import "./navbar.css";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+}));
+
 export function NavBar() {
+  const classes = useStyles();
+
   return (
-    <nav class="navbar">
-      <img src="/logo512.png" alt="logo" />
-      <ul class="navbar-links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Catalog</a>
-        </li>
-        <li>
-          <a href="#">Cart</a>
-        </li>
-      </ul>
-    </nav>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <img src="/logo512.png" alt="logo" className="logo" />
+          <ul className="navbar-links">
+            <li className="navbar-link">
+              <Typography variant="h6">
+                <a href="#">Home</a>
+              </Typography>
+            </li>
+            <li className="navbar-link">
+              <Typography variant="h6">
+                <a href="#">Catalog</a>
+              </Typography>
+            </li>
+            <li className="navbar-link">
+              <Typography variant="h6">
+                <a href="#">Cart</a>
+              </Typography>
+            </li>
+          </ul>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 }
