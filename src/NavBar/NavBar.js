@@ -1,4 +1,3 @@
-import React from "react";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import "./navbar.css";
@@ -7,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  appBar: {
+    backgroundColor: "#1976d2", // Set the background color to match the footer
+  },
 }));
 
 export function NavBar() {
@@ -14,7 +16,7 @@ export function NavBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <img src="/logo512.png" alt="logo" className="logo" />
           <ul className="navbar-links">
