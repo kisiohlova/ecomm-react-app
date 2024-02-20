@@ -1,22 +1,13 @@
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+
 import "./navbar.css";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  appBar: {
-    backgroundColor: "#1976d2", // Set the background color to match the footer
-  },
-}));
-
 export function NavBar() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar}>
+    <div>
+      <AppBar position="static">
         <Toolbar>
           <img src="/logo512.png" alt="logo" className="logo" />
           <ul className="navbar-links">
