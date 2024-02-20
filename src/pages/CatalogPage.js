@@ -1,3 +1,14 @@
+// src/pages/CatalogPage.js
+
+import React from "react";
+import { CatalogItems } from "../CatalogItems/CatalogItems";
+import { FilterBar } from "../CatalogFilterBar/CatalogFilterBar";
+
 export function Catalog() {
-  return <div>Hello Catalog</div>;
+  return (
+    <>
+      <FilterBar />
+      <CatalogItems />;
+    </>
+  );
 }
