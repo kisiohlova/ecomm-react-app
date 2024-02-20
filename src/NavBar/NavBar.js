@@ -1,11 +1,17 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { SearchBar } from "./SearchBar";
 
 import "./navbar.css";
 
 export function NavBar() {
+  const location = useLocation(); // Use useLocation hook
+
+  // Conditionally render the search bar only on the catalog page
+  const showSearchBar = location.pathname === "/catalog";
+
   return (
     <div>
       <AppBar position="static">
@@ -28,6 +34,7 @@ export function NavBar() {
               </Typography>
             </li>
           </ul>
+          {showSearchBar && <SearchBar />}
         </Toolbar>
       </AppBar>
     </div>
