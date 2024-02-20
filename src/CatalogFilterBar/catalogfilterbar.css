@@ -1,0 +1,17 @@
+.filter-bar {
+  margin: 10px 80px;
+  display: flex;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+}
+
+.filter {
+  margin-right: 10px;
+}
+
+.apply-button {
+  margin-left: auto;
+}
