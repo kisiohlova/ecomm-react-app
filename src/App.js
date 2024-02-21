@@ -1,16 +1,21 @@
 // src/App.js
-
+import { Route, Routes } from "react-router-dom";
 import { NavBar } from "./NavBar/NavBar";
-import { Heading } from "./Heading/Heading";
-import { Items } from "./Items/Items";
+import { Home } from "./pages/HomePage";
+import { Catalog } from "./pages/CatalogPage";
+import { Cart } from "./pages/CartPage";
+
 import { Footer } from "./Footer/Footer";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Heading />
-      <Items />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Footer />
     </>
   );

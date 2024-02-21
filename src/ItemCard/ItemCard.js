@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import "./itemcard.css"; // Assuming you have a CSS file for styling
+import "./itemcard.css";
 
 export function ItemCard({ imageUrl, title, text }) {
   return (
